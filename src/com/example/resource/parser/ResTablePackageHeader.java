@@ -82,7 +82,9 @@ public class ResTablePackageHeader extends ResChunkHeader {
 			case 0x0202:
 				chunkHeader = new ResTypeSpecHeader(data, offset, typeStringHeader.stringArray);
 				break;
-	
+			case 0x0201:
+				chunkHeader = new ResTypeTypeHeader(data, offset);
+				break;
 			default:
 				break;
 			}

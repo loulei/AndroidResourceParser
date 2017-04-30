@@ -18,7 +18,7 @@ public class ResTypeSpecHeader extends ResChunkHeader {
 	public void parse() {
 		// TODO Auto-generated method stub
 		parseCustomHeader(data);
-		id = data[offset];
+		id = data[offset]; //start at 1
 		offset+=4;
 		
 		byte[] u4 = new byte[4];
@@ -33,7 +33,7 @@ public class ResTypeSpecHeader extends ResChunkHeader {
 		builder.append("type:").append(ResChunkHeader.ChunkType.getName(type))
 				.append("\n").append("header size:").append(headerSize)
 				.append("\n").append("chunk size:").append(chunkSize)
-				.append("\n").append("type:").append(typeArray[id])
+				.append("\n").append("type:").append(typeArray[id-1])
 				.append("\n").append("entry count:").append(entryCount)
 				.append("\n");
 		System.out.println(builder.toString());

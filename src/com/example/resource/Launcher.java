@@ -11,7 +11,7 @@ import com.example.resource.parser.Resource;
 public class Launcher {
 
 	public static void main(String[] args) {
-		File file = new File("file/resources1.arsc");
+		File file = new File("file/resources.arsc");
 		try {
 			FileInputStream fis = new FileInputStream(file);
 			int len = 0;
